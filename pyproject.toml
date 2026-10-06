@@ -1,0 +1,27 @@
+[build-system]
+requires = ["hatchling==1.27.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "camera-calibration"
+version = "0.1.0"
+description = "Read-only xArm6 and RealSense hand-eye calibration"
+requires-python = ">=3.11,<3.12"
+dependencies = [
+  "numpy==1.26.4",
+  "opencv-contrib-python==4.11.0.86",
+  "pyrealsense2==2.58.4.10922",
+  "xarm-python-sdk==1.18.4",
+]
+
+[project.optional-dependencies]
+test = ["pytest==8.3.5"]
+
+[project.scripts]
+camera-calibration = "camera_calibration.cli:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/camera_calibration"]

@@ -1,0 +1,8 @@
+{
+  "board_type": "gridboard",
+  "markers_x": 3,
+  "markers_y": 3,
+  "marker_length_m": 0.06,
+  "marker_separation_m": 0.007,
+  "dictionary": "DICT_4X4_50"
+}
